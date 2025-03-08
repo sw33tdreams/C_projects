@@ -1,5 +1,6 @@
 #include <stdio.h>
-int main(){
+//sum of 2
+int main() {
 	double a=0;
 	double b=0;
 	printf("add first number \n");
@@ -8,4 +9,5 @@ int main(){
 	scanf("%lf",&b);
 	double c = a + b;
 	printf("sum is %lf",c);
-	return 0;}
+	return 0;
+}
