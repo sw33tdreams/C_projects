@@ -1,5 +1,5 @@
 #include <stdio.h>
-//sum of 2
+//sum of 2 numbers 
 int main() {
 	double a=0;
 	double b=0;
