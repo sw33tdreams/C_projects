@@ -32,21 +32,27 @@ mov rsi,ab
 call scanf
 
 mov rdi,fmt
-mov rsi,[ab+8]
+lea rsi,[ab + 8]
 call scanf
 
+ab0:
 mov rax,[ab]
-cmp rax,[ab+8]
-jg ab1
-mov rdi,print2
-call printf
+mov rbx,[ab + 8]
+cmp rax,rbx
+ja ab1
 jmp ab2
 
 ab1:
 mov rdi,print1
 call printf
+jmp end
 
 ab2:
+mov rdi,print2
+call printf
+jmp end
+
+end:
 mov rsi,rbp
 pop rbp
 mov rax,0
