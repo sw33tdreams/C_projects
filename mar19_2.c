@@ -7,10 +7,10 @@ int main() {
 	printf("enter 2 integer numbers:\n");
 	scanf("%d %d",&a,&b);
 	
-	for(int i = a; i <= b; i++){
-	if(i % 5 == 0){
-	l++;
-	}
+	for(int i = a; i <= b; --i){
+		if(i % 5 == 0){
+			--l;
+		}
 	}
 	printf("theresult is %d \n", l); 
 	return 0;
