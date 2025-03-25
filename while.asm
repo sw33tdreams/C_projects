@@ -25,10 +25,10 @@ mov rdi,fmt
 mov rsi,scan
 call scanf
 
-mov r15,[scan]
+mov rax,0
+mov rax,[scan]
 
 while:
-mov rax,r15
 mov rbx,10
 cmp rax,rbx
 jbe cycle
@@ -38,8 +38,7 @@ cycle:
 mov rdi,print
 mov rsi,rax
 call printf
-mov r15,[scan]
-inc r15
+inc rax
 jmp while
 
 end:
